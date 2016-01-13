@@ -1,0 +1,12 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    ffi (1.9.10)
+    wavefile (0.6.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  ffi (~> 1.9.10)
+  wavefile (~> 0.6.0)
