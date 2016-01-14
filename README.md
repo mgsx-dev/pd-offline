@@ -38,7 +38,7 @@ cd ..
 Now we have to copy libpd binary in pd-offline project (you have to adapt binary name for Windows OS) :
 
 ```
-cp libpd/libs/libpd.so pd-processor/libpd.so
+cp libpd/libs/libpd.so pd-offline/libpd.so
 ```
 
 Setup is OK now.
