@@ -1,9 +1,15 @@
 require 'ffi'
+require 'os'
 
 class Pd 
   extend FFI::Library
 
-  ffi_lib "./libpd.so"
+  ffi_lib case 
+    when OS.linux? then "./libpd.so"
+    when OS.windows? then "./libpd.dll"
+    when OS.mac? then "./libpd.dylib"
+    else raise "unsupported OS"
+  end
 
   # from https://github.com/libpd/libpd/blob/master/libpd_wrapper/z_libpd.h
   functions = [
