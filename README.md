@@ -31,11 +31,14 @@ cd libpd
 git checkout 0.8.3
 git submodule init
 git submodule update
-make EXTRA=true
+make EXTRA=true LOCALE=true
 cd ..
 ```
 
-Now we have to copy libpd binary in pd-offline project (you have to adapt binary name for Windows OS) :
+Note that EXTRA option enable pd externals build and LOCALE option fix a bug on Linux (and maybe other platform) about
+parsing float from pd patches (see https://github.com/libpd/libpd/issues/130).
+
+Now we have to copy libpd binary in pd-offline project. Following command works on Linux, you have to adapt binary name for other plaftorms : **libpd.dylib** on OSX, **libpd.dll** on windows.
 
 ```
 cp libpd/libs/libpd.so pd-offline/libpd.so
