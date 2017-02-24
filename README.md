@@ -46,6 +46,20 @@ cp libpd/libs/libpd.so pd-offline/libpd.so
 
 Setup is OK now.
 
+# Update
+
+To update libpd, update your local libpd clone, build again and copy native library to pd-offline as described
+in setup section.
+
+To update pd-offline, update your local libpd clone (fetch and pull) and install/update dependencies as follow :
+
+```
+cd pd-offline
+bundle install
+```
+
+That's it.
+
 # Tutorial
 
 ## Generate sound
