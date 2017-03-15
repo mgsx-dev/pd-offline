@@ -1,0 +1,10 @@
+#N canvas 193 595 526 300 10;
+#X obj 79 146 dac~;
+#X obj 78 103 rj/u_makepolymono 64 1 ../abs/mono_osc \$0-synth 5 100
+;
+#X msg 57 20 60 127;
+#X msg 116 22 72 64;
+#X connect 1 0 0 0;
+#X connect 1 0 0 1;
+#X connect 2 0 1 0;
+#X connect 3 0 1 0;

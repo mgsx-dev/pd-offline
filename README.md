@@ -1,6 +1,8 @@
 
 Pd Offline is a simple libpd wrapper written in ruby to generate or process wave file with pure data patches. It is executed as fast as possible (depending on your processor), so you don't have to wait any audio playback. You don't need audio neither, so it could be used on headless (actually mic/speaker-less) environnement like remote server.
 
+It also provides benchmarking tools (see [Benchmark your Pd patch](benchmark/README.md))
+
 This project is based on libpd project (https://github.com/libpd/libpd).
 
 Following instructions are based on linux (ubuntu) but could be adapted for Windows and OSX

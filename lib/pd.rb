@@ -17,6 +17,7 @@ class Pd
    [:libpd_init_audio, [:int, :int, :int], :int],
    [:libpd_process_float, [:int, :pointer, :pointer], :int],
    [:libpd_openfile, [:string, :string], :int],
+   [:libpd_closefile, [:int], :void],
    [:libpd_blocksize, [], :int],
 
    #[:libpd_message, [:string, :string, :int, :pointer], :int],
@@ -52,6 +53,9 @@ class Pd
     id = libpd_openfile(patch, dir)
     raise "error opening patch file #{patch} from #{dir}" if id == 0
     return id
+  end
+  def self.closefile(patch)
+    libpd_closefile(patch)
   end
 
   def self.process_float(ticks, input, output)
